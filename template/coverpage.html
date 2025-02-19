@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {font-family: 'LXGWWenKai';src: url('https://mdniceczx.oss-cn-beijing.aliyuncs.com/LXGWWenKai-Regular.ttf') format('truetype');font-weight: normal;font-style: normal;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            background: #ffffff;
+            font-family: LXGWWenKai;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .aspect-ratio-box {
+            position: relative;
+            width: 100%;
+            padding-top: calc(100% / 1.778);
+            overflow: hidden;
+        }
+
+        /* 背景模糊层 */
+        .backdrop-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .backdrop-image {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            right: -50px;
+            bottom: -50px;
+            background-size: cover;
+            background-position: center;
+            filter: blur(30px) brightness(0.9);
+            z-index: 1;
+        }
+
+        .image-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        /* 不同数量图片的网格布局 */
+        .image-grid.single {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .image-grid.two {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .image-grid.three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .image-grid.four {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .image-grid.five {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .image-grid.five .image-wrapper:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .image-grid.six {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+         /* 文本区域样式 */
+        .text { 
+            flex: 1; /* 占据剩余空间 */
+            text-align: center; /* 文本居中 */
+            padding-right: 20px; /* 与图片的间距 */
+            justify-content: center;
+            align-items: center;
+            color: #f0f0f0;
+            margin-top:180px;
+            text-shadow: 
+                -1px -1px 1px rgba(0, 0, 0, 0),
+                1px 1px 1px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- 单张图片 -->
+    <div class="container">
+        <div class="aspect-ratio-box">
+            <div class="backdrop-layer">
+                <div class="backdrop-image" style="background-image: url('/Users/ac/Desktop/待写推文-仅含图表/日度数据/1980年1月1日～2024年12月31日中国各省市区县地表二甲硫醚质量浓度/2024年各城市地表二甲硫醚质量浓度.png');"></div>
+            </div>
+            <div class="image-grid single">
+                <div class="text">
+                    <h1>这是标题</h1>
+                    <p>这是描述文本，可以写一些内容。</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="/Users/ac/Desktop/待写推文-仅含图表/日度数据/1980年1月1日～2024年12月31日中国各省市区县地表二甲硫醚质量浓度/2024年各城市地表二甲硫醚质量浓度.png" alt="图片1">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

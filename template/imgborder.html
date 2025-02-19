@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RStata 图表边框</title>
+    <style>
+        @font-face {font-family: 'LXGWWenKai';src: url('https://mdniceczx.oss-cn-beijing.aliyuncs.com/LXGWWenKai-Regular.ttf') format('truetype');font-weight: normal;font-style: normal;}
+        body {
+            font-family: LXGWWenKai;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        .box {
+            width: 400px;
+            background-color: #ffffff;
+            border-color: #f0f0f0;
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+
+        .qr-code {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff; /* 二维码背景色 */
+            border-color: #ffffff; /* 二维码背景色 */
+            border-width: 0px;
+            border-radius: 10px;
+        }
+
+        .imageraw {
+            width: auto;
+            height: auto;
+        }
+
+        .image {
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            border-color: #f0f0f0;
+            border-width: 1px;
+            border-style: solid;
+            background-color: #ffffff;
+            max-width: 100%;
+        }
+
+        .imageqr {
+            width: auto;
+            height: auto;
+            vertical-align: center;
+            border-radius: 0px;
+            border-color: #ffffff;
+            border-width: 1px;
+            border-style: solid;
+            max-width: 100%;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 10px;
+        }
+
+        .footer:last-child {
+            margin-bottom: 0;
+        }
+
+        .bottom-text {
+            text-align: right;
+            horizontal-align:center;
+            font-size: 12px;
+            color: #aaaaaa;
+            align-items: stretch;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .dashed-line {
+            flex-grow: 1;
+            border-top: 3px dotted #cccccc; /* 虚线样式 */
+            margin-right: 10px; /* 虚线与文本的间距 */
+            margin-top: 5px; /* 虚线与文本的间距 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">标题</div>
+        <div class="subtitle">副标题</div>
+        <div class="qr-code">
+            <img class="imageqr" src="https://mdniceczx.oss-cn-beijing.aliyuncs.com/%E7%9F%AD%E4%B9%A6%E5%B9%B3%E5%8F%B0.png"/>
+        </div>
+        <div class="rawimage">
+            <img class="image" src="/Users/ac/Desktop/待写推文/日度数据/1980年1月1日～2024年12月31日中国各省市区县地表黑碳质量浓度/2024年各城市地表黑碳质量浓度.png"/>
+        </div>
+        <div class="bottom-text">
+            <div class="dashed-line"></div>
+            <span style="color:#f05c3b">R</span>
+            <span style="color:#fed439">S</span>
+            <span style="color:#fd7446">ta</span>
+            <span style="color:#71d0f5">ta</span>
+            <span style="color:#8a9197">&nbsp;学院</span>
+        </div>
+        <div class="footer">数据来源：微信公众号 RStata</div>
+    </div>
+</body>
+</html> 

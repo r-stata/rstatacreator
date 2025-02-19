@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例页面</title>
+    <style>
+        /* 容器样式 */
+        .container {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px;
+            border: 0px solid #fff;
+        }
+
+        /* 内容区域 */
+        .content {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px;
+            border: 4px solid #DCDCDC;
+            min-height: 500px;
+            height: 500px;
+            background-color:#eee5d7ff;
+        }
+
+        /* 左侧样式 */
+        .left {
+            flex: 2.35; /* 左侧宽度比例为 2.35 */
+            margin: 10px;
+            position: relative; /* 为分割线定位 */
+        }
+        .left::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20px; /* 分割线位置 */
+            width: 4px;
+            height: 100%;
+            background-color: #DCDCDC; /* 分割线颜色 */
+        }
+        .left img {
+            width: auto;
+            height: 480px;
+            aspect-ratio: attr(width) / attr(height);
+            display: block;
+            margin: 0 auto; /* 水平居中 */
+        }
+
+        /* 右侧样式 */
+        .right {
+            flex: 1; /* 右侧宽度比例为 1 */
+            display: flex;
+            flex-direction: column;
+            width: 225px;
+            max-width: 225px;
+        }
+        .right-top {
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-right: 10px;
+            color: #585858;
+        }
+        .right-middle {
+            font-size: 30px;
+            margin-bottom: 5px;
+            text-align: right;
+            margin-left: 20px;
+            margin-right: 10px;
+            margin-top: 120px;
+        }
+        .right-bottom img {
+            width: 180px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: 0px;
+        }
+        .right-bottom-text {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* 点状虚线 */
+        .dotted-line {
+            width: 100%; /* 宽度与容器一致 */
+            border-bottom: 6px dotted #DCDCDC; /* 点状虚线样式 */
+            margin-top: 30px; /* 与框的间距 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 内容区域 -->
+        <div class="content">
+            <div class="left">
+                <img class="image" src="/Users/ac/Desktop/2024年各区县逆温数据_第一部分.png"/>
+            </div>
+            <div class="right">
+                <div class="right-top">
+                    1985~2024 年绿色低碳专利申请与授权数据
+                </div>
+                <div class="right-middle">
+                    <span style="color:#f05c3b">R</span><span style="color:#fed439">S</span><span style="color:#fd7446">ta</span><span style="color:#71d0f5">ta</span><span style="color:#8a9197">&nbsp;学院</span>
+                </div>
+                <div class="right-bottom">
+                    <img class="imageqr" src="https://mdniceczx.oss-cn-beijing.aliyuncs.com/%E7%9F%AD%E4%B9%A6%E5%B9%B3%E5%8F%B0.png"/>
+                    <div class="right-bottom-text" style="color:#f05c3b">
+                        👆扫码进入<br>RStata 学院～
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 点状虚线 -->
+        <div class="dotted-line"></div>
+    </div>
+</body>
+</html>

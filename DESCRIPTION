@@ -1,0 +1,30 @@
+Type: Package
+Package: rstatacreator
+Title: 快速创建微信公众号 RStata 的微信推文～
+Version: 0.1.0
+Authors@R: 
+    person("微信公众号 RStata", , , "czxjnu@163.com", role = c("aut", "cre"))
+Description: 快速创建微信公众号 RStata 的微信推文～
+License: MIT + file LICENSE
+Imports: 
+    dplyr,
+    fs,
+    ggplot2,
+    ggthemes,
+    ggwordcloud,
+    haven,
+    htmlTable,
+    knitr,
+    magick,
+    pagedown,
+    pdftools,
+    readr,
+    readxl,
+    rstatatools,
+    servr,
+    stringr,
+    tools,
+    yaml
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
