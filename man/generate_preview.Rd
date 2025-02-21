@@ -4,12 +4,14 @@
 \alias{generate_preview}
 \title{generate_preview: 针对含有 readme.txt 的文件夹生成所需的全部图片截图}
 \usage{
-generate_preview(dir, addwm = F)
+generate_preview(dir, addwm = F, decimal_places = 0)
 }
 \arguments{
 \item{dir}{directory path}
 
 \item{addwm}{if or not add RStata water mark}
+
+\item{decimal_places}{decimal_places}
 }
 \description{
 generate_preview: 针对含有 readme.txt 的文件夹生成所需的全部图片截图
