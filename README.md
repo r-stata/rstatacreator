@@ -16,8 +16,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 欢迎大家关注微信公众号“RStata” 和 “Stata 中文社区” 获取最新资讯和动态！
 
-|                                             RStata                                              |                                          Stata中文社区                                          |
-|:-----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
+| RStata | Stata中文社区 |
+|:--:|:--:|
 | <img src="https://mdniceczx.oss-cn-beijing.aliyuncs.com/image_20201120143454.png" width="50%"/> | <img src="https://mdniceczx.oss-cn-beijing.aliyuncs.com/image_20201120143508.png" width="50%"/> |
 
 ## 安装方法
@@ -40,12 +40,17 @@ devtools::install_github('r-stata/rstatacreator')
 8.  create_tablepre：生成数据预览图
 9.  create_coverpage: 创建 RStata 推文的封面图，16:9 和 2.35:1
     的两种结果
+10. code_split.R: 用于拆分 Stata-Markdown 文件的辅助函数
+11. logfile_handel.R: 用于处理 Stata-Markdown 文件编译的后续程序
 
 ------------------------------------------------------------------------
 
 <h4 align="center">
+
 License
 </h4>
+
 <h6 align="center">
+
 MIT © 微信公众号 RStata
 </h6>

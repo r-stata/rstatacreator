@@ -48,6 +48,8 @@ devtools::install_github('r-stata/rstatacreator')
 1. create_readme: 创建 readme.txt 模板文件
 1. create_tablepre：生成数据预览图
 1. create_coverpage: 创建 RStata 推文的封面图，16:9 和 2.35:1 的两种结果
+1. code_split.R: 用于拆分 Stata-Markdown 文件的辅助函数
+1. logfile_handel.R: 用于处理 Stata-Markdown 文件编译的后续程序
 
 ------------
 
