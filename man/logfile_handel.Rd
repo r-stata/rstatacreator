@@ -4,12 +4,24 @@
 \alias{logfile_handel}
 \title{用于处理 Stata-Markdown 文件编译的后续程序}
 \usage{
-logfile_handel(file = "main.smd", delete_pic = T)
+logfile_handel(
+  file = "main.smd",
+  mdfile = "new_md_content.rds",
+  codefile = "code_blocks.rds",
+  delete_pic = F,
+  pandoc_dir = rmarkdown::find_pandoc()$dir
+)
 }
 \arguments{
-\item{file}{filename}
+\item{file}{original filename}
+
+\item{mdfile}{new_md_content filename}
+
+\item{codefile}{code_blocks filename}
 
 \item{delete_pic}{是否删除中间生成的图片}
+
+\item{pandoc_dir}{pandoc_dir}
 }
 \description{
 用于处理 Stata-Markdown 文件编译的后续程序
