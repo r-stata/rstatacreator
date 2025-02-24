@@ -100,8 +100,7 @@ create_tablepre <- function(data, decimal_places = 2,
 
   # 去除边缘空白
   knitr::plot_crop(output_file)
-
-  # 添加水印
+  
   # 添加水印
   if (addwm == T) {
     rstatatools::addrswm(output_file)
